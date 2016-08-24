@@ -1,0 +1,23 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+    overflow: hidden;
+}
+#dashboard1 {
+	width: 50%;
+	float: left;
+}
+#dashboard2 {
+	width: 50%;
+	float: right;
+}
+#dashboard2 .CDB-Dashboard-menuInner {
+	display: none;
+}
+#dashboard2 .CDB-Dashboard-mapWrapper--withMenu {
+	margin-left: 0;
+}
