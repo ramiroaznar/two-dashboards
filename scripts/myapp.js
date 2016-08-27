@@ -12,7 +12,11 @@
 
         cartodb.deepInsights.createDashboard('#dashboard1', diJSON1, {
             no_cdn: false,
+<<<<<<< HEAD
             zoom: 4,
+=======
+            zoom: 5,
+>>>>>>> f49c68d172b7f0a5f307dbe8ba53ba3af153ccb1
             center: [40, 0]
         }, function (err, dashboard) {
 
@@ -93,7 +97,11 @@
 
         cartodb.deepInsights.createDashboard('#dashboard2', diJSON2, {
             no_cdn: false,
+<<<<<<< HEAD
             zoom: 4,
+=======
+            zoom: 5,
+>>>>>>> f49c68d172b7f0a5f307dbe8ba53ba3af153ccb1
             center: [40, 0]
         }, function (err, dashboard) {
 
