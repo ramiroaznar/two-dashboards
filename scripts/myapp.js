@@ -84,7 +84,7 @@
                 console.log('Map 1 bounds: ' + bounds);
                 console.log('Map 1 zoom: ' + zoom)
 
-                myapp.Cmap2.setCenter(latLng);
+                // myapp.Cmap2.setCenter(latLng);
                 myapp.Cmap2.setZoom(zoom);
 
             });
@@ -117,7 +117,7 @@
                 console.log('Map 2 bounds: ' + bounds);
                 console.log('Map 2 zoom: ' + zoom)
 
-                myapp.Cmap1.setCenter(latLng);
+                // myapp.Cmap1.setCenter(latLng);
                 myapp.Cmap1.setZoom(zoom);
 
             });
