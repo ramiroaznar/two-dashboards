@@ -89,7 +89,6 @@
 
             });
 
-
         });
 
         cartodb.deepInsights.createDashboard('#dashboard2', diJSON2, {
