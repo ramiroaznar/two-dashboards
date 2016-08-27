@@ -12,7 +12,7 @@
 
         cartodb.deepInsights.createDashboard('#dashboard1', diJSON1, {
             no_cdn: false,
-            zoom: 5,
+            zoom: 4,
             center: [40, 0]
         }, function (err, dashboard) {
 
@@ -72,11 +72,29 @@
               "operation": "sum"
             })
 
+
+            myapp.Cmap1.on('moveend', function(e){ // WIP
+
+                var bounds = myapp.Cmap1.getViewBounds(),
+                    lat = (bounds[0][0] + bounds[1][0])/2,
+                    lng = (bounds[0][1] + bounds[1][1])/2,
+                    latLng = [lat,lng],
+                    zoom = myapp.Cmap1.getZoom();
+
+                console.log('Map 1 bounds: ' + bounds);
+                console.log('Map 1 zoom: ' + zoom)
+
+                myapp.Cmap2.setCenter(latLng);
+                myapp.Cmap2.setZoom(zoom);
+
+            });
+
+
         });
 
         cartodb.deepInsights.createDashboard('#dashboard2', diJSON2, {
             no_cdn: false,
-            zoom: 5,
+            zoom: 4,
             center: [40, 0]
         }, function (err, dashboard) {
 
@@ -88,7 +106,24 @@
 
             window.myapp.layers2 = myapp.map2.getLayers();
 
+            myapp.Cmap2.on('moveend', function(e){ // WIP
+
+                var bounds = myapp.Cmap2.getViewBounds(),
+                    lat = (bounds[0][0] + bounds[1][0])/2,
+                    lng = (bounds[0][1] + bounds[1][1])/2,
+                    latLng = [lat,lng],
+                    zoom = myapp.Cmap2.getZoom();
+
+                console.log('Map 2 bounds: ' + bounds);
+                console.log('Map 2 zoom: ' + zoom)
+
+                myapp.Cmap1.setCenter(latLng);
+                myapp.Cmap1.setZoom(zoom);
+
+            });
+
         });
+
     }
 
 })();
