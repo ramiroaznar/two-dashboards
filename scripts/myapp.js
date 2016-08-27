@@ -11,7 +11,9 @@
             diJSON2 = 'https://team.carto.com/u/ramirocartodb/api/v3/viz/f4500318-69e4-11e6-b54d-0e233c30368f/viz.json';
 
         cartodb.deepInsights.createDashboard('#dashboard1', diJSON1, {
-            no_cdn: false
+            no_cdn: false,
+            zoom: 5,
+            center: [40, 0]
         }, function (err, dashboard) {
 
             myapp.dashboard = dashboard1;
@@ -73,7 +75,9 @@
         });
 
         cartodb.deepInsights.createDashboard('#dashboard2', diJSON2, {
-            no_cdn: false
+            no_cdn: false,
+            zoom: 5,
+            center: [40, 0]
         }, function (err, dashboard) {
 
             myapp.dashboard = dashboard2;
