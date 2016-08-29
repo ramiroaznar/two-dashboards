@@ -26,16 +26,10 @@
 
             myapp.Cmap1.on('moveend', function(e){ // WIP
 
-                var bounds = myapp.Cmap1.getViewBounds(),
-                    lat = (bounds[0][0] + bounds[1][0])/2,
-                    lng = (bounds[0][1] + bounds[1][1])/2,
-                    latLng = [lat,lng],
+                var center = myapp.Cmap1.get('center'),
                     zoom = myapp.Cmap1.getZoom();
 
-                console.log('Map 1 bounds: ' + bounds);
-                console.log('Map 1 zoom: ' + zoom)
-
-                // myapp.Cmap2.setCenter(latLng);
+                myapp.Cmap2.setCenter(center);
                 myapp.Cmap2.setZoom(zoom);
 
             });
@@ -59,16 +53,11 @@
 
             myapp.Cmap2.on('moveend', function(e){ // WIP
 
-                var bounds = myapp.Cmap2.getViewBounds(),
-                    lat = (bounds[0][0] + bounds[1][0])/2,
-                    lng = (bounds[0][1] + bounds[1][1])/2,
-                    latLng = [lat,lng],
+                var center = myapp.Cmap2.get('center'),
                     zoom = myapp.Cmap2.getZoom();
 
-                console.log('Map 2 bounds: ' + bounds);
-                console.log('Map 2 zoom: ' + zoom)
 
-                // myapp.Cmap1.setCenter(latLng);
+                myapp.Cmap1.setCenter(center);
                 myapp.Cmap1.setZoom(zoom);
 
             });
